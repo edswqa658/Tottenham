@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+            background-color: #00235E;
+            color: #FFF;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+            nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+}
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+    
+            nav ul li a {
+                color: #FFF;
+                text-decoration: none;
+            }
+    
+            .login-register {
+            text-align: right;
+            margin-left: auto;
+}
+.login-register a {
+      text-decoration: none;
+      color: #FFF;
+      }
+
+main {
+  padding: 20px;
+  margin: 0 auto; 
+  max-width: 1200px;
+}
+
+#standings h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #EEE;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+tfoot {
+  background-color: #EEE;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #EEE;
+  padding: 10px;
+  text-align: center;
+}
+tr.champions-league {
+  background-color: #6495ED; 
+}
+
+tr.europa-league {
+  background-color: #FFD700;
+}
+
+tr.conference-league {
+  background-color: #90EE90; 
+}
+
+tr.relegation {
+  background-color: #FF0000; /
+}
+.login-register {
+        text-align: right;
+      }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="league table.html">League Table</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="login-register">
+          <a href="login.html">로그인</a> <a href="register.html">회원가입</a>
+        </div>
+      </header>
+    
+      <main>
+        <section id="standings">
+          <h2>2022/2023 시즌 팀 순위</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>팀</th>
+                <th>경기수</th>
+                <th>승점</th>
+                <th>승</th>
+                <th>무</th>
+                <th>패</th>
+                <th>득점</th>
+                <th>실점</th>
+                <th>득실차</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="champions-league">
+                <td>1</td>
+                <td>맨체스터 시티 FC</td>
+                <td>38</td>
+                <td>89</td>
+                <td>28</td>
+                <td>5</td>
+                <td>5</td>
+                <td>94</td>
+                <td>33</td>
+                <td>61</td>
+              </tr>
+              <tr class="champions-league">
+                <td>2</td>
+                <td>아스날 FC</td>
+                <td>38</td>
+                <td>84</td>
+                <td>26</td>
+                <td>6</td>
+                <td>6</td>
+                <td>88</td>
+                <td>43</td>
+                <td>45</td>
+              </tr>
+              <tr class="champions-league">
+                <td>3</td>
+                <td>맨체스터 유나이티드 FC</td>
+                <td>38</td>
+                <td>75</td>
+                <td>23</td>
+                <td>6</td>
+                <td>9</td>
+                <td>58</td>
+                <td>43</td>
+                <td>15</td>
+              </tr>
+              <tr class="champions-league">
+                <td>4</td>
+                <td>뉴캐슬 유나이티드 FC</td>
+                <td>38</td>
+                <td>71</td>
+                <td>19</td>
+                <td>14</td>
+                <td>5</td>
+                <td>68</td>
+                <td>33</td>
+                <td>35</td>
+              </tr>
+              <tr class="europa-league">
+                <td>5</td>
+                <td>리버풀 FC</td>
+                <td>38</td>
+                <td>67</td>
+                <td>19</td>
+                <td>10</td>
+                <td>9</td>
+                <td>75</td>
+                <td>47</td>
+                <td>28</td>
+              </tr>
+              <tr class="europa-league">
+                <td>6</td>
+                <td>브라이튼 앤 호브 알비온 FC</td>
+                <td>38</td>
+                <td>62</td>
+                <td>18</td>
+                <td>8</td>
+                <td>12</td>
+                <td>72</td>
+                <td>53</td>
+                <td>19</td>
+              </tr>
+              <tr class="conference-league">
+                <td>7</td>
+                <td>아스톤 빌라 FC</td>
+                <td>38</td>
+                <td>61</td>
+                <td>18</td>
+                <td>7</td>
+                <td>13</td>
+                <td>51</td>
+                <td>46</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>토트넘 홋스퍼 FC</td>
+                <td>38</td>
+                <td>60</td>
+                <td>18</td>
+                <td>6</td>
+                <td>14</td>
+                <td>70</td>
+                <td>63</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>브렌트포드 FC</td>
+                <td>38</td>
+                <td>59</td>
+                <td>15</td>
+                <td>14</td>
+                <td>9</td>
+                <td>58</td>
+                <td>46</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>풀럼 FC</td>
+                <td>38</td>
+                <td>52</td>
+                <td>15</td>
+                <td>7</td>
+                <td>16</td>
+                <td>55</td>
+                <td>53</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>크리스탈 팰리스 FC</td>
+                <td>38</td>
+                <td>45</td>
+                <td>11</td>
+                <td>12</td>
+                <td>15</td>
+                <td>40</td>
+                <td>49</td>
+                <td>-9</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>첼시 FC</td>
+                <td>38</td>
+                <td>44</td>
+                <td>11</td>
+                <td>11</td>
+                <td>16</td>
+                <td>38</td>
+                <td>58</td>
+                <td>-27</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>울버햄튼 원더러스 FC</td>
+                <td>38</td>
+                <td>41</td>
+                <td>11</td>
+                <td>8</td>
+                <td>19</td>
+                <td>31</td>
+                <td>58</td>
+                <td>-27</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>웨스트햄 유나이티드 FC</td>
+                <td>38</td>
+                <td>40</td>
+                <td>11</td>
+                <td>7</td>
+                <td>20</td>
+                <td>42</td>
+                <td>55</td>
+                <td>-13</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>AFC 본머스</td>
+                <td>38</td>
+                <td>39</td>
+                <td>11</td>
+                <td>6</td>
+                <td>21</td>
+                <td>37</td>
+                <td>71</td>
+                <td>-34</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>노팅엄 포레스트 FC</td>
+                <td>38</td>
+                <td>38</td>
+                <td>9</td>
+                <td>11</td>
+                <td>18</td>
+                <td>34</td>
+                <td>57</td>
+                <td>-23</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>에버턴 FC</td>
+                <td>38</td>
+                <td>36</td>
+                <td>8</td>
+                <td>12</td>
+                <td>18</td>
+                <td>34</td>
+                <td>57</td>
+                <td>-23</td>
+              </tr>
+              <tr class="relegation">
+                <td>18</td>
+                <td>레스터 시티 FC</td>
+                <td>38</td>
+                <td>34</td>
+                <td>9</td>
+                <td>7</td>
+                <td>22</td>
+                <td>51</td>
+                <td>68</td>
+                <td>-17</td>
+              </tr>
+              <tr class="relegation">
+                <td>19</td>
+                <td>리즈 유나이티드 FC</td>
+                <td>38</td>
+                <td>31</td>
+                <td>7</td>
+                <td>10</td>
+                <td>21</td>
+                <td>36</td>
+                <td>73</td>
+                <td>-37</td>
+              </tr>
+              <tr class="relegation">
+                <td>20</td>
+                <td>사우스햄튼 FC</td>
+                <td>38</td>
+                <td>25</td>
+                <td>6</td>
+                <td>7</td>
+                <td>25</td>
+                <td>36</td>
+                <td>73</td>
+                <td>-37</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    
+      <footer>
+        <p>&copy; 2023 Tottenham Hotspur. All rights reserved.</p>
+      </footer>
+</body>
+</html>

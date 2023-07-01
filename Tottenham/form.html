@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        body {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00235E;
+  color: #FFF;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+        nav ul li {
+        margin-right: 10px;
+        }
+        
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+        nav ul li a {
+          color: #FFF;
+          text-decoration: none;
+        }
+
+        main {
+  flex-grow: 1;
+  padding: 20px;
+  margin: 0 auto;
+}
+        
+
+        nav ul li a:hover {
+          background-color: #FFF;
+          color: #00235E;
+        }
+
+        .login-register a {
+              text-decoration: none;
+              color: #FFF;
+        }
+
+        main {
+  flex-grow: 1;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+        #checkout {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        #checkout h2 {
+          margin-bottom: 20px;
+        }
+
+        form {
+          display: grid;
+          gap: 10px;
+        }
+
+        label {
+          font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+        }
+
+        input[type="submit"] {
+          padding: 10px 20px;
+          background-color: #00235E;
+          color: #FFF;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        footer {
+  margin-top: auto;
+  background-color: #EEE;
+  padding: 10px;
+  text-align: center;
+}
+    </style>
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="league table.html">League Table</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="login-register">
+          <a href="login.html">로그인</a> <a href="register.html">회원가입</a>
+        </div>
+      </header>
+    
+      <main>
+        <section id="checkout">
+          <h2>Checkout</h2>
+          <form method="post" onsubmit="handleFormSubmit(event)">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="address">주소:</label>
+            <textarea id="address" name="address" required></textarea>
+    
+            <label for="payment">결제 방법:</label>
+            <select id="payment" name="payment" required>
+              <option value="">결제 방법을 선택하세요.</option>
+              <option value="credit_card">신용카드</option>
+              <option value="paypal">무통장 입금</option>
+              <option value="bank_transfer">핸드폰 결제</option>
+            </select>
+    
+            <input type="submit" value="주문하기">
+          </form>
+        </section>
+      </main>
+    
+      <footer>
+        <p>&copy; 2023 Tottenham Hotspur. All rights reserved.</p>
+      </footer>
+      <script>
+        function handleFormSubmit(event) {
+          event.preventDefault(); // Prevent form submission
+          // Show success message
+          alert("주문에 성공하였습니다.");
+          // Redirect to home page
+          window.location.href = "index.html";
+        }
+      </script>  
+</body>
+</html>

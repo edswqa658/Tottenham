@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+header {
+            background-color: #00235E;
+            color: #FFF;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+            nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+}
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+    
+            nav ul li a {
+                color: #FFF;
+                text-decoration: none;
+            }
+    
+            .login-register {
+            text-align: right;
+            margin-left: auto;
+}
+.login-register a {
+      text-decoration: none;
+      color: #FFF;
+      }
+      main {
+  flex-grow: 1;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#fixtures h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #EEE;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+tfoot {
+  background-color: #EEE;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #EEE;
+  padding: 10px;
+  text-align: center;
+}
+.login-register {
+        text-align: right;
+      }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="league table.html">League Table</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="login-register">
+          <a href="login.html">로그인</a> <a href="register.html">회원가입</a>
+        </div>
+      </header>
+    
+      <main>
+        <section id="fixtures">
+          <h2>다가오는 일정들</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023년 7월 18일, 20:00 화요일</td>
+                <td>웨스트햄</td>
+                <td>Optus Stadium</td>
+              <tr>
+                <td>2023년 7월 23일, 19:00 일요일</td>
+                <td>레스터 시티</td>
+                <td>Rajamangala National Stadium</td>
+              </tr>
+              <tr>
+                <td>2023년 7월 26일, 20:30 수요일</td>
+                <td>AS로마</td>
+                <td>Singapore National Stadium</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    
+      <footer>
+        <p>&copy; 2023 Tottenham Hotspur. All rights reserved.</p>
+      </footer>
+</body>
+</html>

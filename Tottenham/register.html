@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tottenham Hotspur - 회원가입</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body {
+              margin: 0;
+              padding: 0;
+            }
+            
+            header {
+              background-color: #00235E;
+              color: #FFF;
+              padding: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            
+            nav ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+            }
+            
+            nav ul li {
+              display: inline;
+              margin-right: 10px;
+            }
+            
+            nav ul li a {
+              color: #FFF;
+              text-decoration: none;
+            }
+            
+            .register-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-top: 50px;
+            }
+            .login-register a {
+      text-decoration: none;
+      color: #FFF;
+      }
+            
+            .register-form {
+              width: 300px;
+              padding: 20px;
+              border: 1px solid #ccc;
+              background-color: #f5f5f5;
+            }
+            
+            .register-form label {
+              display: block;
+              margin-bottom: 10px;
+              font-weight: bold;
+            }
+            
+            .register-form input[type="text"],
+            .register-form input[type="password"] {
+              width: 100%;
+              padding: 5px;
+              margin-bottom: 15px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+            }
+            
+            .register-form button {
+              width: 100%;
+              padding: 8px;
+              background-color: #00235E;
+              color: #fff;
+              border: none;
+              border-radius: 3px;
+              cursor: pointer;
+            }
+            
+            footer {
+              background-color: #EEE;
+              padding: 10px;
+              text-align: center;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+            }
+          </style>
+        </head>
+        
+        <body>
+          <header>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="league table.html">League Table</a></li>
+                <li><a href="shop.html">Shop</a></li>
+              </ul>
+            </nav>
+            <div class="login-register">
+              <a href="login.html">로그인</a> <a href="register.html">회원가입</a>
+            </div>
+          </header>
+        
+          <main>
+            <section>
+              <div class="register-container">
+                <h2>회원가입</h2>
+                <form class="register-form">
+                  <label for="username">아이디:</label>
+                  <input type="text" id="username" required>
+        
+                  <label for="password">비밀번호:</label>
+                  <input type="password" id="password" required>
+        
+                  <label for="confirm-password">비밀번호 확인:</label>
+                  <input type="password" id="confirm-password" required>
+        
+                  <button type="button" id="register">회원가입</button>
+                </form>
+              </div>  
+            </section>
+          </main>
+        
+          <footer>
+            <p>&copy; 2023 Tottenham Hotspur. All rights reserved.</p>
+          </footer>
+          <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyBReZxTXumb6e4VIwvXYzfpdMP7dWQcdBo",
+              authDomain: "login-1c702.firebaseapp.com",
+              projectId: "login-1c702",
+              storageBucket: "login-1c702.appspot.com",
+              messagingSenderId: "23945041760",
+              appId: "1:23945041760:web:68ba209f0bc3f0a4803005",
+              measurementId: "G-GYFT10M2LR"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+
+            import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+            document.getElementById('register').addEventListener('click', (event) => {
+            event.preventDefault()
+            const email = document.getElementById('username').value
+            const password = document.getElementById('password').value
+            const auth = getAuth();
+            createUserWithEmailAndPassword(auth, email, password)
+              .then((userCredential) => {
+                console.log(userCredential)
+              const user = userCredential.user;
+              })
+
+              .catch((error) => {
+                console.log('error')
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              // ..
+              });
+              })
+
+            console.log('aaaa')
+            console.log(app)
+            
+            document.getElementById('register').addEventListener('click', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const auth = getAuth();
+
+            try {
+              const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+              console.log(userCredential);
+              window.location.href = "login.html";
+            } catch (error) {
+              console.log(error.code, error.message);
+            }
+          });
+
+          </script>
+        </body>
+        </html>
